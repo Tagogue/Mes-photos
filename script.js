@@ -19,7 +19,7 @@ let file_reader;
 //     // Créer la db
 //     db.run(`CREATE TABLE photos(html VARCHAR(255))`);
 //     db.run('INSERT INTO photos(html) VALUES(?)', [photos.innerHTML]);
-// 
+//
 
 if(localStorage.Photos) {
   photos.innerHTML = localStorage.Photos;
@@ -36,7 +36,7 @@ const getFiles = () => {
 const displayImg = () => {
   SubmitButton.addEventListener("click", (e) => {
     e.preventDefault();
-    if (files == undefined || files == null || files == false) {
+    if (!files) {
       label.textContent = "Aucun fichier sélectionner";
       label.classList.add("label2");
 
@@ -63,16 +63,15 @@ const displayImg = () => {
 };
 
 const buttonSupFunction = () => {
-  const ButtonSup = document.querySelector(".container-button-sup");
+  const ButtonsSup = document.querySelectorAll(".container-button-sup");
 
-  if (ButtonSup) {
-    ButtonSup.addEventListener("click", () => {
-      ButtonSup.parentElement.remove();
+  if (ButtonsSup) {
+    ButtonsSup.forEach(button => button.addEventListener("click", () => {
+      button.parentElement.remove();
       // db.run('UPDATE JSP COMMENT FAIRE');
       localStorage.Photos = photos.innerHTML;
-      buttonSupFunction();
-    });
-  };
+    }));
+  }
 };
 
 buttonSupFunction();
