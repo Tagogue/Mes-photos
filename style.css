@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: sans-serif;
+    background: #333;
+    user-select: none;
+}
+
+#title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 45px;
+    color: white;
+    padding-bottom: 35px;
+}
+
+form {
+    position: relative;
+    margin-top: 140px;
+}
+
+.photos {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.picture {
+    position: relative;
+    width: 24.9%;
+    height: 30vh;
+    margin-top: 5px;
+    margin-left: 1px;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-button-sup {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.527);
+    border: none;
+    border-radius: 0 0 0 5px;
+    cursor: pointer;
+}
+
+.container-button-sup span {
+    background: white;
+    width: 125%;
+    height: 5px;
+    left: -5px;
+    border-radius: 15px;
+    top: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.container-button-sup span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.container-button-sup span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.label {
+    position: absolute;
+    left: 50%;
+    bottom: 110px;
+    transform: translate(-50%);
+    color: white;
+    transition: 0.3s;
+}
+
+.label2 {
+    position: absolute;
+    left: 50%;
+    bottom: 110px;
+    transform: rotate(1deg) translate(-50%);
+    color: red;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.input {
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translate(-50%);
+    color: white;
+}
+
+.button-submit {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    color: black;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid white;
+}
+
+.button-submit:hover {
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+.sup-picture {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: red;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-none h1 {
+    font-size: 50px;
+    color: white;
+}
+
+@media screen and (max-width: 985px) {
+    .container {
+        display: none;
+    }
+
+    .display-none {
+        display: initial;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

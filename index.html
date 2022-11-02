@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mes photos</title>
+  </head>
+  <body>
+    <div class="display-none">
+      <h1>Taille Minimum 986px</h1>
+    </div>
+    <div class="container">
+      <h1 id="title" class="title">Mes photos</h1>
+      <div class="photos"></div>
+      <form method="post" enctype="multipart/form-data">
+        <div>
+          <label class="label" for="file"
+            >Sélectionner le fichier à envoyer</label
+          ><br />
+          <input
+            class="input"
+            type="file"
+            id="file"
+            multiple
+            accept=".jpg,.png"
+          />
+        </div>
+        <div>
+          <button class="button-submit">Envoyer</button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
